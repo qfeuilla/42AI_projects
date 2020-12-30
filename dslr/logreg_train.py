@@ -65,8 +65,6 @@ print("len of data :", len(data))
 def get_X_Ys(data, n_class, index, classes, test_split=15):
 	Ys = []
 
-	np.random.seed(42)
-
 	# create split list for train_test split
 	train_splt = [np.random.rand() > (test_split / 100) for _ in range(len(data))]
 	test_splt = [not i for i in train_splt]
@@ -118,7 +116,6 @@ print("\nX is shape :", X.shape)
 print()
 
 def create_n_wb(n, input_size):
-	np.random.seed(42)
 	return np.random.randn(n, input_size, 1), np.random.randn(n, 1)
 
 weights, biases = create_n_wb(n_class, X.shape[1])
