@@ -20,10 +20,6 @@ print()
 X = np.array(datas.iloc[:, 0])
 Y = np.array(datas.iloc[:, 1])
 
-# mean of our inputs and outputs
-x_mean = np.mean(X)
-y_mean = np.mean(Y)
-
 # speed from which the algorithm "learn"
 lr_scalert0 = 1e5
 lr_scalert1 = 1e-5
