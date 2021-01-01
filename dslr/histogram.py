@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("dataset_train.csv")
+data = pd.read_csv("datas/dataset_train.csv")
 data = data.fillna(data.mean())
 
 def normalize(df):

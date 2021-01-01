@@ -20,7 +20,7 @@ def percentile(d, p, cnt):
 all_features = [[" ", "Count", "Mean", "Std", "Min", "25%", "50%", "75%", "Max"]]
 for k in data.keys():
 	# if data is numerical, get datas
-	if (type(data[k][0]) == np.float64) and len(all_features) < 5:
+	if (type(data[k][0]) == np.float64):
 		d = np.array([i for i in data[k] if not np.isnan(i)])
 		if len(d) == 0:
 			continue
@@ -40,6 +40,6 @@ for k in data.keys():
 		one_feature.append(str(d[-1]))
 		all_features.append(one_feature)
 
-space_between_col = 2
+space_between_col = 5
 
 print("\n".join([" ".join([('%.{}s'.format(len(f[0]) + space_between_col))%(f[i].rjust(len(f[0]) + space_between_col)) if f[0] != " " else f[i].ljust(5 + space_between_col)  for f in all_features]) for i in range(len(all_features[0]))]))
