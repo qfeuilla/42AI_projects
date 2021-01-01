@@ -42,8 +42,8 @@ old_t0, old_t1 = [-42, -42]
 t0, t1 = [0, 0]
 
 # if the algo update only by threshold, stop the learning
-thresholdt0 = 0.01
-thresholdt1 = 1e-8
+thresholdt0 = 0.1
+thresholdt1 = 1e-6
 
 #loss history
 errors = []
